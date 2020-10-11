@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ej3">
+
+    <Button
+        android:id="@+id/numero0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/operacionpunto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero1" />
+
+    <Button
+        android:id="@+id/operacionpunto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="punto"
+        android:text="."
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/operacionigual"
+        app:layout_constraintStart_toStartOf="@+id/numero3"
+        app:layout_constraintTop_toBottomOf="@+id/numero3" />
+
+    <Button
+        android:id="@+id/operacionigual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="igual"
+        android:text="="
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numero3"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <Button
+        android:id="@+id/numero1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero0"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/numero2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero4" />
+
+    <Button
+        android:id="@+id/numero3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="3"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/operacionpunto"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/operacionigual"
+        app:layout_constraintStart_toEndOf="@+id/numero2"
+        app:layout_constraintTop_toBottomOf="@+id/numero6" />
+
+    <Button
+        android:id="@+id/numero2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="2"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero0"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/numero3"
+        app:layout_constraintStart_toEndOf="@+id/numero1"
+        app:layout_constraintTop_toBottomOf="@+id/numero5" />
+
+    <Button
+        android:id="@+id/numero4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="4"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero1"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toStartOf="@+id/numero5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero7" />
+
+    <Button
+        android:id="@+id/numero6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="6"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero3"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toStartOf="@+id/opearionsumar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numero5"
+        app:layout_constraintTop_toBottomOf="@+id/numero9" />
+
+    <Button
+        android:id="@+id/numero5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero2"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toStartOf="@+id/numero6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numero4"
+        app:layout_constraintTop_toBottomOf="@+id/numero8" />
+
+    <Button
+        android:id="@+id/opearionsumar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="operador"
+        android:text="+"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/operacionigual"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numero6"
+        app:layout_constraintTop_toBottomOf="@+id/operacionrestar" />
+
+    <Button
+        android:id="@+id/numero7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="7"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero4"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toStartOf="@+id/numero8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operacionborraruno" />
+
+    <Button
+        android:id="@+id/numero8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="8"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero5"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toStartOf="@+id/numero9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numero7"
+        app:layout_constraintTop_toBottomOf="@+id/operacionc" />
+
+    <Button
+        android:id="@+id/operacionrestar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="operador"
+        android:text="-"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/opearionsumar"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numero9"
+        app:layout_constraintTop_toBottomOf="@+id/opearionmultiplicar" />
+
+    <Button
+        android:id="@+id/numero9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="recogerNumeros"
+        android:text="9"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero6"
+        app:layout_constraintDimensionRatio="0"
+        app:layout_constraintEnd_toStartOf="@+id/operacionrestar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/numero8"
+        app:layout_constraintTop_toBottomOf="@+id/operaciondividir" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/operacionborraruno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="borrarUltimo"
+        android:text="D"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero7"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/operacionc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/operacionc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="cdecero"
+        android:text="C"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero8"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/operaciondividir"
+        app:layout_constraintStart_toEndOf="@+id/operacionborraruno"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/operaciondividir"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="operador"
+        android:text="/"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/numero9"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/opearionmultiplicar"
+        app:layout_constraintStart_toEndOf="@+id/operacionc"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/opearionmultiplicar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="operador"
+        android:text="*"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/operacionrestar"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/operaciondividir"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68262655" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

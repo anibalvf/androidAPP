@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C03F4A8"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ejercicios Tema 3"
+        android:textColor="#E80707"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Anibal Vallejo Franco"
+        android:textColor="#F30606"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/b_ej1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="Ejercicio 1 - TIC TAC TOE" />
+
+            <Button
+                android:id="@+id/b_ej2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="EJERCICIO 2 - CALCULADORA BINARIA" />
+
+            <Button
+                android:id="@+id/b_ej3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="EJERCICIO 3 - CALCULADORA" />
+
+            <Button
+                android:id="@+id/b_ej4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="EJERCICIO 4 - CONVERSOR" />
+
+            <Button
+                android:id="@+id/b_ej5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/b_ej6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/b_ej7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/b_ej8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/b_ej9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/b_ej10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="irEjercicio"
+                android:text="EJERCICIO 10" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 20" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
