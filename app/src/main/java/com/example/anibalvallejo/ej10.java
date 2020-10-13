@@ -2,6 +2,8 @@ package com.example.anibalvallejo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.RotateDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +24,7 @@ public class ej10 extends AppCompatActivity {
             {R.id.pos48, R.id.pos49, R.id.pos50, R.id.pos51, R.id.pos52, R.id.pos53},
             {R.id.pos54, R.id.pos55, R.id.pos56, R.id.pos57, R.id.pos58, R.id.pos59},
     };
-    int[][] tablero = new int[tableroID.length][tableroID[0].length];
+    double[][] tablero = new double[tableroID.length][tableroID[0].length];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +63,7 @@ public class ej10 extends AppCompatActivity {
 
     }
 
-    public void ponerBarcosxd(int largura, int id){
+    public void ponerBarcosxd(int largura, double id){
         Random r = new Random();
         //alea hace referencia a si va a estar puesto de manera vertical 1 u horizontal 2
         int alea;
@@ -103,10 +105,13 @@ public class ej10 extends AppCompatActivity {
                 //compruebo que se ha movido al menos 4 veces y que no esta ocupado
                 if(contador >= largura && cont==0){
                     int veces =largura;
+                    //para colocar las fotos el idinterno se sumara en 1 segun la posicion del barco y el primer digito corresponde a la altura
+                    double idinterno= 0.10;
                     while(veces>0){
-                        tablero[x][j]=id;
+                        tablero[x][j]=id+idinterno;
                         x++;
                         veces--;
+                        idinterno+=0.01;
                     }
                     fin=true;
                 }
@@ -138,10 +143,12 @@ public class ej10 extends AppCompatActivity {
                 }
                 if(contador >= largura && cont==0){
                     int veces =largura;
+                    double idinterno= 0.00;
                     while(veces>0){
-                        tablero[x][j]=id;
+                        tablero[x][j]=id+idinterno;
                         j++;
                         veces--;
+                        idinterno+=0.01;
                     }
                     fin=true;
                 }
@@ -164,24 +171,121 @@ public class ej10 extends AppCompatActivity {
                 }
             }
         }
+        imagenBarco(ipos,jpos,b);
 
+
+
+    }
+    public void imagenBarco(int ipos,int jpos,Button b){
+        RotateDrawable rt ;
         if (tablero[ipos][jpos]==0){
             b.setBackgroundResource(R.drawable.ocean);
             b.setText("");
 
-        }else if(tablero[ipos][jpos]==1){
+            ////////////////////////////////////////////////
+            //barco de 4
+        }else if(tablero[ipos][jpos]==1.10){
+            b.setRotation(b.getRotation()+90F);
             b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatroprincipio);
         }
-        else if(tablero[ipos][jpos]==2){
+        else if(tablero[ipos][jpos]==1.11){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatromedio);
+        }
+        else if(tablero[ipos][jpos]==1.12){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatrocasifinal);
+
+        }
+        else if(tablero[ipos][jpos]==1.13){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatrofinal);
+        }
+        else if(tablero[ipos][jpos]==1.00){
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatroprincipio);
+        }
+        else if(tablero[ipos][jpos]==1.01){
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatromedio);
+
+        }
+        else if(tablero[ipos][jpos]==1.02){
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatrocasifinal);
+        }
+        else if(tablero[ipos][jpos]==1.03){
+            b.setText("4");
+            b.setBackgroundResource(R.drawable.barcodecuatrofinal);
+
+        }
+        ////////////////////////////////////////////////
+        //barco de 3
+        else if(tablero[ipos][jpos]==2.10){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("3");
+            b.setBackgroundResource(R.drawable.barcodetresprincipio);
+        }
+        else if(tablero[ipos][jpos]==2.11){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("3");
+            b.setBackgroundResource(R.drawable.barcodetresmedio);
+        }
+        else if(tablero[ipos][jpos]==2.12){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("3");
+            b.setBackgroundResource(R.drawable.barcodetresfinal);
+
+        }
+        else if(tablero[ipos][jpos]==2.00){
+            b.setBackgroundResource(R.drawable.barcodetresprincipio);
             b.setText("3");
         }
-        else if(tablero[ipos][jpos]==3){
-            b.setText("2");
+        else if(tablero[ipos][jpos]==2.01){
+
+            b.setText("3");
+            b.setBackgroundResource(R.drawable.barcodetresmedio);
         }
-        else if(tablero[ipos][jpos]==4){
-            b.setText("1");
+        else if(tablero[ipos][jpos]==2.02){
+            b.setText("3");
+            b.setBackgroundResource(R.drawable.barcodetresfinal);
         }
 
+        ////////////////////////////////////////////////
+        //barco de 2
+        else if(tablero[ipos][jpos]==3.10){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("2");
+            b.setBackgroundResource(R.drawable.barcodedosprincipio);
+        }
+        else if(tablero[ipos][jpos]==3.11){
+            b.setRotation(b.getRotation()+90F);
+            b.setText("2");
+            b.setBackgroundResource(R.drawable.barcodedosfinal);
+        }
+        else if(tablero[ipos][jpos]==3.00){
+            b.setText("2");
+            b.setBackgroundResource(R.drawable.barcodedosprincipio);
+        }
+        else if(tablero[ipos][jpos]==3.01){
+            b.setText("2");
+            b.setBackgroundResource(R.drawable.barcodedosfinal);
+        }
+        ////////////////////////////////////////////////
+        //barco de 1
+        else if(tablero[ipos][jpos]==4.0){
+            b.setText("1");
+            b.setBackgroundResource(R.drawable.barcodeuno);
+        }
+        else if(tablero[ipos][jpos]==4.1){
+
+            b.setText("1");
+            b.setBackgroundResource(R.drawable.barcodeuno);
+        }
 
 
     }
